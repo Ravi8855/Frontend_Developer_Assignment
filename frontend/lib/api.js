@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api", // backend URL
+  baseURL: process.env.NEXT_PUBLIC_API_URL || "https://frontend-developer-assignment-2.onrender.com/api",
 });
 
 API.interceptors.request.use((config) => {
